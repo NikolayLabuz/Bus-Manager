@@ -19,29 +19,29 @@ ALL_BUSES — вывести список всех маршрутов с ост�
 
 1.query.h, в него кладём:
 
-  enum class QueryType
+enum class QueryType
   
-  struct Query
+struct Query
   
-  объявление istream& operator >> (istream& is, Query& q)
+объявление istream& operator >> (istream& is, Query& q)
 
 2. query.cpp, в него кладём
 
-  определение istream& operator >> (istream& is, Query& q);
+определение istream& operator >> (istream& is, Query& q);
 
 3. responses.h:
 
-  struct BusesForStopResponse
+struct BusesForStopResponse
   
-  ostream& operator << (ostream& os, const BusesForStopResponse& r)
+ostream& operator << (ostream& os, const BusesForStopResponse& r)
   
-  struct StopsForBusResponse
+struct StopsForBusResponse
   
-  ostream& operator << (ostream& os, const StopsForBusResponse& r)
+ostream& operator << (ostream& os, const StopsForBusResponse& r)
   
-  struct AllBusesResponse
+struct AllBusesResponse
   
-  ostream& operator << (ostream& os, const AllBusesResponse& r)
+ostream& operator << (ostream& os, const AllBusesResponse& r)
 
 4. responses.cpp: определения всего, что объявлено в responses.h
 
