@@ -17,7 +17,7 @@ ALL_BUSES — вывести список всех маршрутов с ост�
 
 Так же выполнена декомпозиция программы:
 
-1.query.h, в него кладём:
+  1.query.h, в него кладём:
 
 enum class QueryType
 
@@ -25,11 +25,11 @@ struct Query
 
 объявление istream& operator >> (istream& is, Query& q)
 
-2. query.cpp, в него кладём
+  2. query.cpp, в него кладём
 
 определение istream& operator >> (istream& is, Query& q);
 
-3. responses.h:
+  3. responses.h:
 
 struct BusesForStopResponse
 
@@ -43,10 +43,10 @@ struct AllBusesResponse
 
 ostream& operator << (ostream& os, const AllBusesResponse& r)
 
-4. responses.cpp: определения всего, что объявлено в responses.h
+  4. responses.cpp: определения всего, что объявлено в responses.h
 
-5. bus_manager.h: объявление класса BusManager
+  5. bus_manager.h: объявление класса BusManager
 
-6. bus_manager.cpp: определения методов класса BusManager
+  6. bus_manager.cpp: определения методов класса BusManager
 
-7. main.cpp: функция main
+  7. main.cpp: функция main
